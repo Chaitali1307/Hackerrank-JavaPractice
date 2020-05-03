@@ -1,20 +1,22 @@
-package com.strings.stringsintroduction;
+package com.strings.reverse;
 
 import java.io.*;
 import java.util.*;
 
-public class StringsTest {
+public class StringReverseTest {
 
     public static void main(String[] args) {
         
         Scanner sc=new Scanner(System.in);
         String A=sc.next();
-        String B=sc.next();
         /* Enter your code here. Print output to STDOUT. */
-        System.out.println(A.length()+B.length());
-
-        int i = A.compareTo(B);
-        if(i>0)
+        String B = "";
+        int N = A.length()-1;
+        for(int i = N; i >=0; i--)
+        {
+            B = B + A.charAt(i);
+        }
+        if(A.equals(B))
         {
             System.out.println("Yes");
         }
@@ -22,8 +24,6 @@ public class StringsTest {
         {
             System.out.println("No");
         }
-        System.out.println(A.substring(0,1).toUpperCase()+A.substring(1)+" "+B.substring(0,1).toUpperCase()+B.substring(1));
         
     }
 }
-
